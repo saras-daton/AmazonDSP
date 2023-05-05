@@ -1,0 +1,45 @@
+version: 2
+models:
+  - name: AmazonDSPCampaignReport
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['advertiserId','ReportDate','OrderId','LineItemId','CreativeID','CreativeAdId']
+      partition_by: { 'field': 'reportDate', 'data_type': 'date' }
+      cluster_by: ['advertiserId','OrderId','LineItemId','CreativeID'] 
+  - name: AmazonDSPAudienceReport
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['advertiserId','ReportDate','OrderId','LineItemId']
+      partition_by: { 'field': 'reportDate', 'data_type': 'date' }
+      cluster_by: ['advertiserId','OrderId','LineItemId'] 
+  - name: AmazonDSPGeographyReport
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['advertiserId','ReportDate','OrderId','LineItemId']
+      partition_by: { 'field': 'reportDate', 'data_type': 'date' }
+      cluster_by: ['advertiserId','OrderId','LineItemId'] 
+  - name: AmazonDSPInventoryReport
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['advertiserId','ReportDate','OrderId','LineItemId']
+      partition_by: { 'field': 'reportDate', 'data_type': 'date' }
+      cluster_by: ['advertiserId','OrderId','LineItemId'] 
+  - name: AmazonDSPProductsReport
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['advertiserId','ReportDate','OrderId','LineItemId']
+      partition_by: { 'field': 'reportDate', 'data_type': 'date' }
+      cluster_by: ['advertiserId','OrderId','LineItemId'] 
+  - name: AmazonDSPTechnologyReport
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['ReportDate','OrderId','LineItemId']
+      partition_by: { 'field': 'reportDate', 'data_type': 'date' }
+      cluster_by: ['OrderId','LineItemId'] 
+
