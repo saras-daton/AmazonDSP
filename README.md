@@ -8,7 +8,7 @@ This dbt package is for the Amazon Delivery Service Partner data unification Ing
 
 #### Typical challenges with raw data are:
 - Array/Nested Array columns which makes queries for Data Analytics complex
-- Data duplication due to look back period while fetching report data from Amazon Seller Partner
+- Data duplication due to look back period while fetching report data from Amazon Marketing UI
 - Separate tables at marketplaces/Store, brand, account level for same kind of report/data feeds
 
 By doing Data Unification the above challenges can be overcomed and simplifies Data Analytics. 
