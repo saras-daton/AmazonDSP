@@ -1,17 +1,17 @@
 # Amazon Delivery Service Partner Data Unification
 
-This dbt package is for the Amazon Delivery Service Partner data unification Ingested by [Daton](https://sarasanalytics.com/daton/). [Daton](https://sarasanalytics.com/daton/) is the Unified Data Platform for Global Commerce with 100+ pre-built connectors and data sets designed for accelerating the eCommerce data and analytics journey by [Saras Analytics](https://sarasanalytics.com).
+This dbt package is for the Amazon DSP data unification ingested by Daton. Daton is the Unified Data Platform for Global Commerce with 100+ pre-built connectors and data sets designed for accelerating the eCommerce data and analytics journey by [Saras Analytics](https://sarasanalytics.com).
 
 ### Supported Datawarehouses:
-- BigQuery
-- Snowflake
+- [BigQuery](https://sarasanalytics.com/blog/what-is-google-bigquery/)
+- [Snowflake](https://sarasanalytics.com/daton/snowflake/)
 
 #### Typical challenges with raw data are:
 - Array/Nested Array columns which makes queries for Data Analytics complex
 - Data duplication due to look back period while fetching report data from Amazon Marketing UI
 - Separate tables at marketplaces/Store, brand, account level for same kind of report/data feeds
 
-By doing Data Unification the above challenges can be overcomed and simplifies Data Analytics. 
+By doing data unification the above challenges can be overcomed and simplifies Data Analytics. 
 As part of Data Unification, the following functions are performed:
 - Consolidation - Different marketplaces/Store/account & different brands would have similar raw Daton Ingested tables, which are consolidated into one table with column distinguishers brand & store
 - Deduplication - Based on primary keys, the data is De-duplicated and the latest records are only loaded into the consolidated stage tables
@@ -23,7 +23,7 @@ As part of Data Unification, the following functions are performed:
 
 #### Prerequisite 
 Daton Integrations for  
-- Amazon DSP 
+- [Amazon DSP](https://sarasanalytics.com/daton/amazon-dsp/) 
 - Exchange Rates (Optional, if currency conversion is not required)
 
 
@@ -75,7 +75,7 @@ CampaignReport: False
 
 ## Models
 
-This package contains models from the Amazon Adverstising API which includes reports on {{audience, campaign, inventory, product, geography, technology}}. The primary outputs of this package are described below.
+This package contains models from the [Amazon Adverstising API](https://sarasanalytics.com/daton/amazon-ads/) which includes reports on {{audience, campaign, inventory, product, geography, technology}}. The primary outputs of this package are described below.
 
 | **Category**                 | **Model**  | **Description** |
 | ------------------------- | ---------------| ----------------------- |
@@ -149,6 +149,6 @@ models:
 
 
 ## Resources:
-- Have questions, feedback, or need [help](https://calendly.com/srinivas-janipalli/30min)? Schedule a call with our data experts or email us at info@sarasanalytics.com.
+- Have questions, feedback, or need [help](https://calendly.com/srinivas-janipalli/30min)? Schedule a call with our data experts or [contact us](https://sarasanalytics.com/contact).
 - Learn more about Daton [here](https://sarasanalytics.com/daton/).
 - Refer [this](https://youtu.be/6zDTbM6OUcs) to know more about how to create a dbt account & connect to {{Bigquery/Snowflake}}
