@@ -1,8 +1,9 @@
 # Amazon Delivery Service Partner Data Unification
-
+## What is the purpose of this dbt package?
 This dbt package is for the Amazon DSP data unification ingested by Daton. Daton is the Unified Data Platform for Global Commerce with 100+ pre-built connectors and data sets designed for accelerating the eCommerce data and analytics journey by [Saras Analytics](https://sarasanalytics.com).
 
-### Supported Datawarehouses:
+## How do I use Amazon DSP dbt package?
+### Supported Data Warehouses:
 - [BigQuery](https://sarasanalytics.com/blog/what-is-google-bigquery/)
 - [Snowflake](https://sarasanalytics.com/daton/snowflake/)
 
@@ -21,13 +22,13 @@ As part of Data Unification, the following functions are performed:
 	  Prerequisite - Exchange Rates connector in Daton needs to be present - Refer [this](https://github.com/saras-daton/currency_exchange_rates)
 	- Time Zone Conversion (Optional) - Raw Tables data created at Marketplace/Store/Account level may have data in local timezone of the corresponding marketplace/store/account. DateTime values that are in local timezone are standardized by converting to specified timezone using input offset hours.
 
-#### Prerequisite 
+#### Prerequisites for Amazon DSP dbt package 
 Daton Integrations for  
 - [Amazon DSP](https://sarasanalytics.com/daton/amazon-dsp/) 
 - Exchange Rates (Optional, if currency conversion is not required)
 
 
-# Configuration 
+# Configuration for dbt package 
 
 ## Required Variables
 
@@ -148,7 +149,7 @@ models:
 
 
 
-## Resources:
+## What resources are available for Amazon DSP dbt?:
 - Have questions, feedback, or need [help](https://calendly.com/srinivas-janipalli/30min)? Schedule a call with our data experts or [contact us](https://sarasanalytics.com/contact).
 - Learn more about Daton [here](https://sarasanalytics.com/daton/).
 - Refer [this](https://youtu.be/6zDTbM6OUcs) to know more about how to create a dbt account & connect to {{Bigquery/Snowflake}}
